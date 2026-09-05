@@ -1,62 +1,149 @@
 # Ontology Feedback
 
-이 저장소는 개발 학습 중 발생한 현실 문제를 **온톨로지적으로 구조화**하고, 문제 해결 과정을 기록하기 위한 저장소입니다.
+This repository is a personal knowledge-structuring lab for turning complex real-world problems into reusable ontology, feedback loops, and AI system design patterns.
 
-단순히 “오류가 났다”에서 끝내지 않고, 문제를 다음 흐름으로 정리합니다.
+It is not just a collection of troubleshooting notes. It is a record of how I think: observing messy reality, extracting signals, organizing evidence, identifying causes, designing corrective actions, and converting the result into reusable knowledge.
+
+## Positioning
+
+I am an AI-native Technical PM with domain experience in medicine and legal workflows.
+
+I have hands-on experience structuring multiple civil and criminal legal disputes, including related procedural and evidentiary workflows. Through this experience, I developed practical insight into legal document workflows, evidence organization, issue mapping, procedural timelines, and risk analysis.
+
+After evaluating external legal support, I independently rebuilt the case structure, documentation strategy, and evidence-to-issue mapping process. This shaped my interest in Legal AI, ontology-driven reasoning, and safer domain-specific AI systems.
+
+I focus on ontology-driven AI systems, especially Legal/Medical AI, safe RAG architecture, API contracts, guardrails, observability, and backend orchestration.
+
+I am building toward Legal/Medical AI systems where ontology, safe RAG, guardrails, and backend orchestration help structure complex domain knowledge into reliable AI workflows.
+
+## Why This Matters
+
+Modern AI systems do not become useful only by connecting an LLM to a chat UI.
+
+In high-stakes domains such as law and medicine, the harder problems are:
+
+- defining the right concepts
+- mapping evidence to issues
+- separating facts, claims, risks, and decisions
+- tracing where an answer came from
+- preventing unsafe or unsupported responses
+- turning domain workflows into reliable system behavior
+
+That is why ontology matters.
+
+For me, ontology is not an abstract academic word. It is a practical way to make complex work inspectable, repeatable, and safer.
 
 ```text
-현실 문제 발견
--> 증거 수집
--> 원인 진단
--> 기술적 해결
--> 피드백 보정
--> 재발 방지 지식화
+Messy reality
+-> observable signals
+-> evidence
+-> issue mapping
+-> cause analysis
+-> corrective action
+-> feedback
+-> reusable knowledge
 ```
 
-## 저장소 목적
-
-개발자는 코드만 보는 사람이 아니라, 코드가 실행되는 현실 환경까지 함께 읽어야 합니다.
-
-이 저장소는 다음 역량을 기록하기 위해 만들었습니다.
-
-- 문제 상황을 감정이 아닌 구조로 정리하는 능력
-- 실행 환경, 도구 설정, 오류 메시지를 근거로 원인을 찾는 능력
-- AI 도구를 활용해 진단 과정을 빠르게 좁히는 능력
-- 발견한 문제를 해결 가능한 단위로 쪼개는 능력
-- 해결 경험을 다음 학습과 개발에 재사용 가능한 지식으로 바꾸는 능력
-
-## 핵심 온톨로지 모델
+## Core Model
 
 ```mermaid
 flowchart TD
-    Problem["현실 문제<br/>학습 또는 개발이 막힌 상태"]
-    Signal["관찰 신호<br/>오류 메시지, 실행 실패, 자동완성 불가"]
-    Evidence["증거<br/>명령어 결과, 화면 캡처, 환경 설정"]
-    Cause["원인<br/>JDK 미설치, PATH 누락, 도구 설정 오류"]
-    Action["해결 행동<br/>설치, 설정 변경, 재실행"]
-    Feedback["피드백<br/>정상 실행 여부 확인"]
-    Knowledge["지식화<br/>문서화, 체크리스트, 재발 방지"]
+    A["Real Problem"]
+    B["Signals"]
+    C["Evidence"]
+    D["Issue Map"]
+    E["Cause"]
+    F["Action"]
+    G["Feedback"]
+    H["Reusable Knowledge"]
 
-    Problem --> Signal
-    Signal --> Evidence
-    Evidence --> Cause
-    Cause --> Action
-    Action --> Feedback
-    Feedback --> Knowledge
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
 ```
 
-## 문서
+## Legal / Medical AI Direction
+
+This repository is also a foundation for my long-term Legal/Medical AI direction.
+
+The target is not a generic chatbot. The target is a domain-aware AI system that can structure specialized knowledge and workflows.
+
+```text
+Legal AI
+-> legal documents
+-> claims and defenses
+-> evidence-to-issue mapping
+-> procedural timelines
+-> risk analysis
+-> safer legal reasoning support
+```
+
+```text
+Medical AI
+-> clinical documents
+-> symptoms and findings
+-> diagnosis and treatment concepts
+-> guideline-based reasoning
+-> risk and safety boundaries
+-> safer medical workflow support
+```
+
+## AI System Architecture Direction
+
+The backend and AI architecture direction I am building toward:
+
+```text
+Client / User
+-> REST API
+-> Request DTO
+-> Validation
+-> Service Layer
+-> Guardrails
+-> RAG / Knowledge Graph
+-> LLM
+-> Evidence-based Response
+-> ErrorResponse
+-> Observability
+-> Monitoring
+```
+
+Key technical interests:
+
+- Spring Boot REST API contracts
+- FastAPI AI servers
+- safe RAG architecture
+- NVIDIA NeMo Guardrails
+- domain ontology and knowledge graphs
+- API ErrorResponse design
+- traceId and observability
+- Actuator, metrics, Prometheus, and Grafana
+- Java 21 Virtual Threads for waiting-heavy AI workloads
+
+## Documents
 
 - [현실 문제 해결 온톨로지](docs/PROBLEM_SOLVING_ONTOLOGY.md)
 - [Problem-Solving Ontology English Version](docs/PROBLEM_SOLVING_ONTOLOGY_EN.md)
 
-## 정리 방향
+## Study And Portfolio Direction
 
-이 저장소는 개인적인 사건 기록을 그대로 공개하기보다, 문제 해결 과정에서 얻은 구조적 사고와 재사용 가능한 학습 모델을 정리하는 데 초점을 둡니다.
+This repository connects my learning process to my portfolio direction.
 
-핵심은 특정 사건이 아니라 다음 역량입니다.
+I use AI tools such as Codex and Claude not as copy-paste shortcuts, but as acceleration tools for implementation, review, documentation, and architectural comparison.
 
-- 혼란스러운 현실 문제를 관찰 가능한 신호로 나누기
-- 증거를 바탕으로 원인을 진단하기
-- 기술적 해결 행동으로 연결하기
-- 해결 과정을 문서화하여 재사용 가능한 지식으로 만들기
+My focus is to understand and explain:
+
+- what problem is being solved
+- what concepts are involved
+- how the process flows
+- what evidence supports the decision
+- where the risk is
+- how the result can be reused
+- how the structure can become part of an AI system
+
+## One-Line Summary
+
+I am building an ontology-driven AI Technical PM practice around Legal/Medical AI, safe RAG, guardrails, API contracts, observability, and backend orchestration.

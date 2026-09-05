@@ -1,5 +1,19 @@
 # Ontology Feedback
 
+## Core Positioning
+
+```text
+Medical background
++ Legal dispute structuring experience
++ Ontology-driven thinking
++ AI-native PM / backend orchestration
+= Legal/Medical AI Technical PM
+```
+
+This is the core positioning of this repository.
+
+I connect domain knowledge, legal and medical reasoning patterns, ontology-based structure, and AI-native backend architecture into practical AI system design.
+
 This repository is a personal knowledge-structuring lab for turning complex real-world problems into reusable ontology, feedback loops, and AI system design patterns.
 
 It is not just a collection of troubleshooting notes. It is a record of how I think: observing messy reality, extracting signals, organizing evidence, identifying causes, designing corrective actions, and converting the result into reusable knowledge.

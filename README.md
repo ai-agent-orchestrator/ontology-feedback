@@ -3,6 +3,14 @@
 ## Core Positioning
 
 ```text
+Domain-driven AI Technical PM
+for healthcare, legal, cybersecurity, and AI governance
+```
+
+I combine healthcare and legal domain experience with hands-on AI backend practice.
+My focus is building safe, observable, and compliant AI systems for high-stakes domains.
+
+```text
 Medical background
 + Legal dispute structuring experience
 + Ontology-driven thinking

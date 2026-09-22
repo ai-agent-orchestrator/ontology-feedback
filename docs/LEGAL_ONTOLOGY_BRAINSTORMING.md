@@ -281,6 +281,15 @@ AI-assisted legal self-representation support
 
 The legal market may become more polarized.
 
+Four rough market segments:
+
+```text
+1. high-skill lawyers with strong marketing
+2. specialized boutique law firms with clear domain positioning
+3. network / brand-based firms handling easier cases at scale
+4. mid-tier undifferentiated offices with high retainers but weak structured output
+```
+
 Segments likely to remain strong:
 
 ```text
@@ -302,6 +311,41 @@ slow document workflows
 low digital maturity
 AI-weaker explanations
 ```
+
+The fourth segment faces an existential question:
+
+```text
+Will it become a consumer-close boutique with structured intake,
+clear service scope, strong communication, and digital workflow?
+
+Or will it remain a high-fee, low-output, phone-first office
+and lose users who can now prepare cases with AI?
+```
+
+This is not only a marketing problem.
+It is a business model and workflow problem.
+
+Even courts are becoming more digital:
+
+```text
+electronic court
+online filing
+digital evidence
+document-based procedure
+remote information access
+```
+
+But many legal offices still depend on:
+
+```text
+phone calls
+signboards
+word of mouth
+Naver ads
+unstructured desk filtering
+```
+
+This gap creates both crisis and opportunity.
 
 Middle-layer opportunity:
 
@@ -328,7 +372,7 @@ low-differentiation legal services with high fees but weak structured output wil
 One possible product model:
 
 ```text
-24/7 AI-assisted legal intake
+24/7 AI-assisted legal intake chatbot
 -> 20-minute structured intake
 -> case summary
 -> evidence checklist
@@ -362,6 +406,13 @@ Possible service flow:
 8. user chooses paid consultation or document review
 9. lawyer receives structured packet
 10. consultation is more efficient
+```
+
+This can be framed as an intake system chatbot:
+
+```text
+not a final legal-answer chatbot
+but a filtering, summarization, readiness, and routing chatbot
 ```
 
 Possible routing:
@@ -551,4 +602,3 @@ Korean version:
 법률 서비스의 변화는 AI가 법률 질문에 답하는 것만으로 오지 않는다.
 정식 수임 이전의 intake, 증거 매핑, 문서 준비, 변호사 연결 워크플로우가 AI로 재구조화되면서 온다.
 ```
-

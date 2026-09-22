@@ -1,192 +1,340 @@
-# Ontology Feedback
+# Legal Ontology Feedback
 
-## Core Positioning
+This `legal` branch is a market-research and ontology-design note for a future legal AI product.
 
-```text
-Domain-driven AI Technical PM
-for healthcare, legal, cybersecurity, and AI governance
-```
-
-I combine healthcare and legal domain experience with hands-on AI backend practice.
-My focus is building safe, observable, and compliant AI systems for high-stakes domains.
+The focus is not a generic legal chatbot.
+The focus is the intake layer before legal advice begins.
 
 ```text
-Medical background
-+ Legal dispute structuring experience
-+ Ontology-driven thinking
-+ AI-native PM / backend orchestration
-= Legal/Medical AI Technical PM
-```
-
-This is the core positioning of this repository.
-
-I connect domain knowledge, legal and medical reasoning patterns, ontology-based structure, and AI-native backend architecture into practical AI system design.
-
-This repository is a personal knowledge-structuring lab for turning complex real-world problems into reusable ontology, feedback loops, and AI system design patterns.
-
-It is not just a collection of troubleshooting notes. It is a record of how I think: observing messy reality, extracting signals, organizing evidence, identifying causes, designing corrective actions, and converting the result into reusable knowledge.
-
-## Positioning
-
-I am an AI-native Technical PM with domain experience in medicine and legal workflows.
-
-I have hands-on experience structuring multiple civil and criminal legal disputes, including related procedural and evidentiary workflows. Through this experience, I developed practical insight into legal document workflows, evidence organization, issue mapping, procedural timelines, and risk analysis.
-
-After evaluating external legal support, I independently rebuilt the case structure, documentation strategy, and evidence-to-issue mapping process. This shaped my interest in Legal AI, ontology-driven reasoning, and safer domain-specific AI systems.
-
-I focus on ontology-driven AI systems, especially Legal/Medical AI, safe RAG architecture, API contracts, guardrails, observability, and backend orchestration.
-
-I am building toward Legal/Medical AI systems where ontology, safe RAG, guardrails, and backend orchestration help structure complex domain knowledge into reliable AI workflows.
-
-## Why This Matters
-
-Modern AI systems do not become useful only by connecting an LLM to a chat UI.
-
-In high-stakes domains such as law and medicine, the harder problems are:
-
-- defining the right concepts
-- mapping evidence to issues
-- separating facts, claims, risks, and decisions
-- tracing where an answer came from
-- preventing unsafe or unsupported responses
-- turning domain workflows into reliable system behavior
-
-That is why ontology matters.
-
-For me, ontology is not an abstract academic word. It is a practical way to make complex work inspectable, repeatable, and safer.
-
-```text
-Messy reality
--> observable signals
--> evidence
--> issue mapping
--> cause analysis
--> corrective action
--> feedback
--> reusable knowledge
-```
-
-## Core Model
-
-```mermaid
-flowchart TD
-    A["Real Problem"]
-    B["Signals"]
-    C["Evidence"]
-    D["Issue Map"]
-    E["Cause"]
-    F["Action"]
-    G["Feedback"]
-    H["Reusable Knowledge"]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-```
-
-## Legal / Medical AI Direction
-
-This repository is also a foundation for my long-term Legal/Medical AI direction.
-
-The target is not a generic chatbot. The target is a domain-aware AI system that can structure specialized knowledge and workflows.
-
-```text
-Legal AI
--> legal documents
--> claims and defenses
+legal intake
 -> evidence-to-issue mapping
--> procedural timelines
--> risk analysis
--> safer legal reasoning support
+-> case readiness
+-> lawyer routing
+-> AI-assisted self-representation support
 ```
+
+Boundary:
 
 ```text
-Medical AI
--> clinical documents
--> symptoms and findings
--> diagnosis and treatment concepts
--> guideline-based reasoning
--> risk and safety boundaries
--> safer medical workflow support
+This is not legal advice.
+This is a legal intake, evidence mapping, and workflow-structuring concept.
 ```
 
-## AI System Architecture Direction
+## Market Observation
 
-The backend and AI architecture direction I am building toward:
+After direct contact with many law offices over about a month, the main bottleneck appeared to be less about legal theory itself and more about the weakly structured intake process before consultation.
+
+Legal clients are no longer information-empty.
+
+Many users now arrive after:
 
 ```text
-Client / User
--> REST API
--> Request DTO
--> Validation
--> Service Layer
--> Guardrails
--> RAG / Knowledge Graph
--> LLM
--> Evidence-based Response
--> ErrorResponse
--> Observability
--> Monitoring
+search
+YouTube
+community reading
+AI-assisted case structuring
+electronic court experience
+draft document preparation
 ```
 
-Key technical interests:
+But many legal offices still operate with:
 
-- Spring Boot REST API contracts
-- FastAPI AI servers
-- safe RAG architecture
-- NVIDIA NeMo Guardrails
-- domain ontology and knowledge graphs
-- API ErrorResponse design
-- traceId and observability
-- Actuator, metrics, Prometheus, and Grafana
-- Java 21 Virtual Threads for waiting-heavy AI workloads
+```text
+phone-first intake
+desk-level filtering
+unstructured consultation
+high upfront retainers
+weak written output
+Naver-focused marketing
+limited digital workflow
+```
+
+This creates a gap between user expectation and legal service intake.
+
+## Core Thesis
+
+```text
+Legal service transformation will not come only from AI answering legal questions.
+It will come from AI restructuring the intake, evidence mapping, document preparation, and lawyer routing workflow before formal representation begins.
+```
+
+Korean version:
+
+```text
+법률 서비스의 변화는 AI가 법률 질문에 답하는 것만으로 오지 않는다.
+정식 수임 이전의 intake, 증거 매핑, 문서 준비, 변호사 연결 워크플로우가 AI로 재구조화되면서 온다.
+```
+
+## Four Market Segments
+
+The legal market may become more polarized.
+
+```text
+1. high-skill lawyers with strong marketing
+2. specialized boutique law firms with clear domain positioning
+3. network / brand-based firms handling easier cases at scale
+4. mid-tier undifferentiated offices with high retainers but weak structured output
+```
+
+The fourth segment faces an existential question:
+
+```text
+Will it become a consumer-close boutique with structured intake,
+clear service scope, strong communication, and digital workflow?
+
+Or will it remain a high-fee, low-output, phone-first office
+and lose users who can now prepare cases with AI?
+```
+
+This is not only a marketing problem.
+It is a business model and workflow problem.
+
+Even courts are becoming more digital:
+
+```text
+electronic court
+online filing
+digital evidence
+document-based procedure
+remote information access
+```
+
+But many legal offices still depend on:
+
+```text
+phone calls
+signboards
+word of mouth
+Naver ads
+unstructured desk filtering
+```
+
+This gap creates both crisis and opportunity.
+
+## Product Direction
+
+The product direction is an intake system chatbot.
+
+```text
+not a final legal-answer chatbot
+but a filtering, summarization, readiness, and routing chatbot
+```
+
+Possible service flow:
+
+```text
+1. user starts AI intake
+2. AI asks structured questions
+3. user writes free-text story
+4. AI extracts facts, dates, parties, evidence, claims
+5. system creates readiness score
+6. system identifies missing information
+7. system generates consultation packet
+8. user chooses paid consultation or document review
+9. lawyer receives structured packet
+10. consultation is more efficient
+```
+
+## Hybrid Intake Model
+
+Legal intake cannot be fully checkbox-based because legal cases are narrative-heavy.
+
+But pure free text is also too unstructured.
+
+The better structure is hybrid:
+
+```text
+minimum checklist
++ free-text narrative
++ AI summarization
++ missing information detection
++ readiness scoring
++ routing decision
+```
+
+Draft intake fields:
+
+```text
+case type
+claim purpose
+desired service scope
+evidence exists
+deadline exists
+opponent known
+damage amount known
+current procedural stage
+urgency
+budget range
+preferred support type
+```
+
+## Evidence-To-Issue Mapping
+
+The core of case preparation is not persuasive language alone.
+
+The stronger structure is:
+
+```text
+issue
+-> fact to prove
+-> evidence
+-> explanation
+-> procedural submission
+```
+
+Legal AI should not only generate long arguments.
+It should map evidence to issues.
+
+```text
+Legal AI should become an evidence map and case preparation system,
+not only a legal answer generator.
+```
+
+## Self-Represented But AI-Augmented Users
+
+Some users do not primarily need full representation.
+
+They need:
+
+```text
+case structuring
+evidence organization
+issue mapping
+document drafting support
+deadline checks
+procedural checklists
+limited expert review
+```
+
+User type:
+
+```text
+self-represented but AI-augmented legal user
+```
+
+This creates a middle layer between:
+
+```text
+full representation
+```
+
+and:
+
+```text
+doing everything alone without tools
+```
+
+## Draft Ontology Direction
+
+The future legal ontology should separate:
+
+```text
+Case
+Party
+Claim
+Defense
+Fact
+Evidence
+Issue
+Deadline
+Damage
+ProcedureStage
+Risk
+Action
+Document
+ServiceScope
+ReadinessDecision
+```
+
+Possible relationships:
+
+```text
+Case hasParty Party
+Case hasClaim Claim
+Claim requiresFact Fact
+Fact supportedBy Evidence
+Evidence proves Issue
+Case hasDeadline Deadline
+Case hasProcedureStage ProcedureStage
+Case hasRisk Risk
+Case needsAction Action
+User requestsServiceScope ServiceScope
+ReadinessDecision recommends Action
+```
+
+## Development Roadmap
+
+Short-term prototype:
+
+```text
+Legal Intake Readiness API
+Legal Intake History
+Readiness Score
+React Draft Panel
+Legal Ontology Draft Document
+```
+
+Next project direction:
+
+```text
+Legal/admin knowledge graph
+Case readiness graph API
+Evidence-to-issue map
+Missing information checklist
+Consultation packet generator
+```
+
+AI chatbot direction:
+
+```text
+Legal intake chatbot
+SSE streaming UI
+JWT login
+chat history
+intake history
+readiness score
+guardrail boundary
+```
+
+Python / Guardrails direction:
+
+```text
+NeMo Guardrails input rail
+legal advice boundary rail
+Colang intake flow
+Python ontology action
+Spring history and metrics integration
+```
+
+LangChain / RAG direction:
+
+```text
+legal/admin document retrieval
+evidence checklist retrieval
+procedure guide retrieval
+consultation packet grounding
+LangSmith trace and evaluation
+```
 
 ## Documents
 
+- [Legal Ontology Brainstorming](docs/LEGAL_ONTOLOGY_BRAINSTORMING.md)
+- [Legal Intake Readiness Draft](docs/LEGAL_INTAKE_READINESS_DRAFT.md)
 - [현실 문제 해결 온톨로지](docs/PROBLEM_SOLVING_ONTOLOGY.md)
 - [Problem-Solving Ontology English Version](docs/PROBLEM_SOLVING_ONTOLOGY_EN.md)
-- [Legal Intake Readiness Draft](docs/LEGAL_INTAKE_READINESS_DRAFT.md)
-- [Legal Ontology Brainstorming](docs/LEGAL_ONTOLOGY_BRAINSTORMING.md)
 
-## Legal Branch Draft Direction
+## Positioning
 
-The `legal` branch contains a first draft for legal intake readiness.
+This repository is a personal knowledge-structuring lab for turning messy legal-service observations into reusable ontology, product hypotheses, and AI system design patterns.
+
+The long-term direction:
 
 ```text
-Legal intake signal
--> case signal
--> readiness score
--> case readiness decision
--> recommended next step
--> intake history
+Legal intake
+-> evidence mapping
+-> readiness scoring
+-> safe RAG
+-> guardrails
+-> lawyer routing
+-> observable AI workflow
 ```
-
-This is not legal advice.
-It is a draft structure for organizing legal intake before consultation.
-
-The ontology is intentionally shallow for now.
-Future work will expand the model into facts, claims, defenses, evidence, procedural timelines, deadlines, risks, and consultation readiness.
-
-## Study And Portfolio Direction
-
-This repository connects my learning process to my portfolio direction.
-
-I use AI tools such as Codex and Claude not as copy-paste shortcuts, but as acceleration tools for implementation, review, documentation, and architectural comparison.
-
-My focus is to understand and explain:
-
-- what problem is being solved
-- what concepts are involved
-- how the process flows
-- what evidence supports the decision
-- where the risk is
-- how the result can be reused
-- how the structure can become part of an AI system
-
-## One-Line Summary
-
-I am building an ontology-driven AI Technical PM practice around Legal/Medical AI, safe RAG, guardrails, API contracts, observability, and backend orchestration.

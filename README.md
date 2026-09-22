@@ -150,6 +150,7 @@ Key technical interests:
 - [현실 문제 해결 온톨로지](docs/PROBLEM_SOLVING_ONTOLOGY.md)
 - [Problem-Solving Ontology English Version](docs/PROBLEM_SOLVING_ONTOLOGY_EN.md)
 - [Legal Intake Readiness Draft](docs/LEGAL_INTAKE_READINESS_DRAFT.md)
+- [Legal Ontology Brainstorming](docs/LEGAL_ONTOLOGY_BRAINSTORMING.md)
 
 ## Legal Branch Draft Direction
 

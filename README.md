@@ -1,6 +1,8 @@
 # Legal Ontology Feedback
 
-This `legal` branch is a market-research, ontology-design, and product-brainstorming note for a future legal AI product.
+This `legal` branch is a market-research and ontology-design note for a future legal AI chatbot.
+
+The focus is the intake layer before legal advice begins.
 
 ## AI Legal Firm Chatbot Direction
 

@@ -1,9 +1,18 @@
 # Legal Ontology Feedback
 
-This `legal` branch is a market-research and ontology-design note for a future legal AI product.
+This `legal` branch is a market-research, ontology-design, and product-brainstorming note for a future legal AI product.
 
-The focus is not a generic legal chatbot.
-The focus is the intake layer before legal advice begins.
+## AI Legal Firm Chatbot Direction
+
+The target product is:
+
+```text
+AI Legal Firm Chatbot
+= ontology-driven legal intake system
+```
+
+The goal is not a final legal-answer chatbot.
+The goal is an intake system that structures the case before formal legal advice begins.
 
 ```text
 legal intake
@@ -18,6 +27,142 @@ Boundary:
 ```text
 This is not legal advice.
 This is a legal intake, evidence mapping, and workflow-structuring concept.
+```
+
+## Chatbot System Design
+
+The AI chatbot should combine conversation, ontology, backend history, and guardrails.
+
+```text
+Legal intake chatbot
+-> structured conversation
+-> free-text story capture
+-> ontology extraction
+-> evidence-to-issue mapping
+-> readiness score
+-> missing information questions
+-> consultation packet
+-> lawyer routing
+-> guardrail boundary
+```
+
+Core application modules:
+
+```text
+SSE streaming UI
+JWT login
+chat history
+intake history
+readiness score
+evidence map
+case graph
+guardrail boundary
+admin / lawyer dashboard
+metrics and trace history
+```
+
+The chatbot should not jump directly to legal conclusions.
+
+It should first ask:
+
+```text
+What happened?
+Who are the parties?
+What claim or outcome does the user want?
+What evidence exists?
+Which dates and deadlines matter?
+What is the current procedural stage?
+What information is missing?
+What service scope is the user actually asking for?
+```
+
+## Ontology-First Structure
+
+The chatbot should convert conversation into a structured ontology.
+
+Core entities:
+
+```text
+Case
+Party
+Claim
+Defense
+Fact
+Evidence
+Issue
+Deadline
+Damage
+ProcedureStage
+Risk
+Action
+Document
+ServiceScope
+ReadinessDecision
+ConsultationPacket
+LawyerRouting
+```
+
+Core relationships:
+
+```text
+Case hasParty Party
+Case hasClaim Claim
+Claim requiresFact Fact
+Fact supportedBy Evidence
+Evidence proves Issue
+Case hasDeadline Deadline
+Case hasProcedureStage ProcedureStage
+Case hasRisk Risk
+Case needsAction Action
+User requestsServiceScope ServiceScope
+ReadinessDecision recommends Action
+ConsultationPacket summarizes Case
+LawyerRouting routes Case to ServiceScope
+```
+
+Ontology-driven conversation flow:
+
+```text
+User narrative
+-> extract facts, parties, dates, amounts, documents
+-> classify case type
+-> identify claims and possible issues
+-> map evidence to facts/issues
+-> detect missing information
+-> calculate readiness score
+-> recommend next step
+-> generate consultation packet
+```
+
+## Market Positioning
+
+This product is positioned between full legal representation and unsupported self-representation.
+
+```text
+full representation
+<->
+AI-assisted legal intake and case preparation
+<->
+self-representation without tools
+```
+
+The market opportunity:
+
+```text
+users are increasingly AI-assisted and evidence-aware
+but many law offices still rely on phone-first intake and weak routing
+```
+
+The product answer:
+
+```text
+intake system chatbot
+-> filtering
+-> summarization
+-> readiness scoring
+-> evidence mapping
+-> consultation packet
+-> lawyer routing
 ```
 
 ## Market Observation
@@ -111,7 +256,7 @@ unstructured desk filtering
 
 This gap creates both crisis and opportunity.
 
-## Product Direction
+## Intake Product Direction
 
 The product direction is an intake system chatbot.
 

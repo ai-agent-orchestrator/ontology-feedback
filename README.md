@@ -149,6 +149,26 @@ Key technical interests:
 
 - [현실 문제 해결 온톨로지](docs/PROBLEM_SOLVING_ONTOLOGY.md)
 - [Problem-Solving Ontology English Version](docs/PROBLEM_SOLVING_ONTOLOGY_EN.md)
+- [Legal Intake Readiness Draft](docs/LEGAL_INTAKE_READINESS_DRAFT.md)
+
+## Legal Branch Draft Direction
+
+The `legal` branch contains a first draft for legal intake readiness.
+
+```text
+Legal intake signal
+-> case signal
+-> readiness score
+-> case readiness decision
+-> recommended next step
+-> intake history
+```
+
+This is not legal advice.
+It is a draft structure for organizing legal intake before consultation.
+
+The ontology is intentionally shallow for now.
+Future work will expand the model into facts, claims, defenses, evidence, procedural timelines, deadlines, risks, and consultation readiness.
 
 ## Study And Portfolio Direction
 
